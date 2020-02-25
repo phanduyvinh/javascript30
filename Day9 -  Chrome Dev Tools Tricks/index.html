@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('Hiiiiiiii');
+    // Interpolated
+    console.log('Hello!This is %s Vinh!','☻');
+
+    // Styled
+    console.log('%c I am a good man','font-size:60px; font-weight:bold; color: green');
+    // warning!
+    console.warn('Damn');
+    // Error :|
+    console.error('Yeah! 404 Not Found!');
+    // Info
+    console.info('Info is here! Info is here! Info is here! Info is here! Info is here! Info is here!');
+    // Testing
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains('ouch'), 'That is wrong!');
+    // clearing
+    console.clear();
+    // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
+
+    console.clear();
+    console.log('%c Stop here!!!!!!','font-size:60px; font-weight:bold; color: green');
+    // Grouping together
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`);
+      console.log(`This is ${dog.name} and it is ${dog.age} year old `);
+      console.groupEnd();
+    });
+    // counting
+    console.count('Vinh');
+    console.count('Vinh');
+    console.count('Phan');
+    console.count('Vinh');
+    console.count('Vinh');
+    console.count('Phan');
+    console.count('Vinh');
+    // timing
+    console.time('loading data ...');
+    fetch('https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json')
+    .then(data => data.json())
+    .then(data => {
+      console.timeEnd('loading data ...');
+      console.log(data);
+    });
+
+  </script>
+</body>
+</html>
