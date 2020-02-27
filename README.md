@@ -5,3 +5,13 @@
 - Day 4 - Array Cardio Practice
 - Day 5 - Flexbox + Javascript Image Gallery	day 4, 5	1 minute ago
 - Day 6 - Ajax Type Ahead with fetch()
+- Day 7
+- Day 8
+- Day 9
+- Day 10
+- Day 11
+- Day 12
+- Day 13
+- Day 14
+- Day 15
+- Day 16
